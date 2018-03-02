@@ -27,5 +27,14 @@ Vizity et l\'92application chef-d\'92oeuvre se d\'e9marquent donc des autres pre
 \ulnone 1. int\'e9grer la fiche lieu dans la carte (et donc le rendu est g\'e9r\'e9 par Vizity)\
 2. concernant le carousel, au clic sur une \'e9chope, recharger la page en appelant une carte avec un param\'e8tre d\'92url qui ira zoomer sur le bon lieu\
 \
-Quelle est la diff\'e9rence entre iframe et une API ? L\'92iframe permet d\'92int\'e9grer une carte que l\'92on a param\'e9tr\'e9e au pr\'e9alable avec seulement une balise <iframe> qui va aller r\'e9cup\'e9rer le code html de la carte et l\'92int\'e9grer au site. Une API permettra de d\'e9velopper beaucoup plus pr\'e9cis\'e9ment la carte que l\'92on souhaite. La question que je me pose \'e9tant : quelle est la diff\'e9rence entre l\'92utilisation d\'92une iframe, d\'92une API (de MapBox ou autre) pour construire sa carte et de l\'92API de Vizity ?\
+Quelle est la diff\'e9rence entre iframe et une API ? L\'92iframe permet d\'92int\'e9grer une carte que l\'92on a param\'e9tr\'e9e au pr\'e9alable avec seulement une balise <iframe> qui va aller r\'e9cup\'e9rer le code html de la carte et l\'92int\'e9grer au site. Une API permettra de d\'e9velopper beaucoup plus pr\'e9cis\'e9ment la carte que l\'92on souhaite.\
+\
+\
+\ul Id\'e9es en vrac :\
+\
+\ulnone Les donn\'e9es renvoy\'e9es au format JSON par l\'92API de Vizity pourront \'eatre r\'e9cup\'e9r\'e9es et stock\'e9es dans des variables utilis\'e9es par la suite pour l\'92affichage d\'92informations (revoir ce qui a \'e9t\'e9 fait en stage \'e0 ce niveau, par exemple coordonn\'e9es des POI,\'85).\
+\
+On stocke les donn\'e9es des \'e9choppes (coordonn\'e9es, nom,\'85) dans notre propre BDD. Ces donn\'e9es seront ensuite envoy\'e9es \'e0 l\'92API de Vizity via une requ\'eate POST et le jeu de donn\'e9es r\'e9cup\'e9r\'e9 sera int\'e9gr\'e9 dans une iframe.\
+\
+Table de donn\'e9es POI dans notre BDD ou dans celle de Vizity pour utilisation de l\'92API ?\
 }
