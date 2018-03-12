@@ -1,8 +1,8 @@
 <?php
 
-function addPoi($name, $lat, $lng, $map_id)
-{
-    require 'config.php';
+function addPoi($name, $lat, $lng, $map_id) {
+
+    require '../config.php';
 
     try {
         $pdo = new PDO($dsn, $user, $password);
@@ -12,9 +12,9 @@ function addPoi($name, $lat, $lng, $map_id)
     }
 
     try {
-        $sql = ("INSERT INTO pois (name, lat, lng, map_id) VALUES (:name, :lat, :lng, :map_id)");
+        $sql = "INSERT INTO pois (name, lat, lng, map_id) VALUES (:name, :lat, :lng, :map_id)";
 
-        $statement = $sql->prepare();
+        $statement = $pdo->prepare($sql);
 
         $statement->bindParam(':name', $name);
         $statement->bindParam(':lat', $lat);
@@ -26,8 +26,7 @@ function addPoi($name, $lat, $lng, $map_id)
         } else {
             echo "Ajout non effectué";
         }
-
-        return $statement;
+        
     } catch (PDOException $e) {
         echo 'Connexion échouée : ' . $e->getMessage();
     }

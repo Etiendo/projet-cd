@@ -4,7 +4,7 @@
 <head>
     <meta charset=utf-8>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel=stylesheet href="../assets/css.style.css" type="text/css">
+    <link rel=stylesheet href="../assets/css/style.css" type="text/css">
     <title>Ma carte perso</title>
 
 </head>
@@ -28,11 +28,11 @@
             </div>
             <div class="col-6">
                 <h2>Ajouter des POI en BDD</h2>
-                <form action=".../controller/map_browse.php" method="post">
+                <form action="../controller/add_poi.php" method="post">
                     <p>Nom échoppe <input type="text" name="echoppe" /></p>
-                    <p>Latitude <input type="text" name="latitude" /></p>
-                    <p>Longitude <input type="text" name="longitude" /></p>
-                    <p><input type="submit" value="OK" name="submit" /></p>
+                    <p>Latitude <input type="value" name="latitude"  /></p>
+                    <p>Longitude <input type="value" name="longitude" /></p>
+                    <p><input type="submit" value="OK"          name="submit" /></p>
                 </form>
             </div>
         </div>
@@ -50,11 +50,11 @@
                   <p><?php echo $poi['lng']; ?></p>
               </div>
               <div class="col-2">
-                <p><a href=".../controller/edit_poi.php?id=<?php echo $poi['poi_id']; ?>">Modifier</a></p>
+                <p><a href="../controller/edit_poi.php?id=<?php echo $poi['poi_id']; ?>">Modifier</a></p>
               </div>
               <div class="col-1">
                 <form action="../controller/map_browse.php?id=<?php echo $poi['poi_id']; ?>" method="post">
-                  <p><input type="submit" value="Supprimer POI" name="submit" /></p>
+                  <p><input type="submit" value="supprimer_poi" name="submit" /></p>
                 </form>
               </div>
           </div>
