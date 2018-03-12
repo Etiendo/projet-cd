@@ -53,8 +53,8 @@
                 <p><a href="../controller/edit_poi.php?id=<?php echo $poi['poi_id']; ?>">Modifier</a></p>
               </div>
               <div class="col-1">
-                <form action="../controller/map_browse.php?id=<?php echo $poi['poi_id']; ?>" method="post">
-                  <p><input type="submit" value="supprimer_poi" name="submit" /></p>
+                <form action="../controller/delete_poi.php?id=<?php echo $poi['poi_id']; ?>" method="post">
+                  <p><input type="submit" value="Supprimer POI" name="submit" /></p>
                 </form>
               </div>
           </div>

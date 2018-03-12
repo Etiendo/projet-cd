@@ -1,35 +1,33 @@
 <?php
 
-function addPoi($name, $lat, $lng, $map_id) {
-
+function editPoi($id, $name, $lat, $lng) {
+    
     require '../config.php';
 
-    try {
+     try {
         $pdo = new PDO($dsn, $user, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo 'Connexion échouée : ' . $e->getMessage();
     }
 
-    $sql = "INSERT INTO pois (name, lat, lng, map_id) VALUES (:name, :lat, :lng, :map_id)";
+    $sql = "UPDATE pois SET name = :name, lat = :lat, lng = :lng WHERE poi_id = :id";
 
     try {
         $statement = $pdo->prepare($sql);
 
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->bindParam(':name', $name, PDO::PARAM_STR);
         $statement->bindParam(':lat', $lat);
         $statement->bindParam(':lng', $lng);
-        $statement->bindParam(':map_id', $map_id, PDO::PARAM_INT);
 
         if ($statement->execute()) {
-            echo "POI ajouté !";
+            echo "POI modifié !";
         } else {
-            echo "Ajout non effectué";
+            echo "Modification non effectuée.";
         }
-        
+
     } catch (PDOException $e) {
         echo 'Connexion échouée : ' . $e->getMessage();
     }
 }
-
-header('location: map_browse.php');
