@@ -59,6 +59,17 @@ Table de donn\'e9es POI dans notre BDD ou dans celle de Vizity pour utilisation 
 {\listtext	\uc0\u8259 	}Mettre en place structure de base site\
 \pard\pardeftab560\slleading20\partightenfactor0
 \cf2 \
-Pour modifier les poi, mettre une route vers le controller edit avec poi_id qui d\'e9bouche sur un formulaire php
+Pour modifier les poi, mettre une route vers le controller edit avec poi_id qui d\'e9bouche sur un formulaire php\
+\
+Remarques pour la suite :\
+- pour afficher des POI li\'e9s \'e0 un user_id d\'e9sign\'e9 comme \'ab\'a0admin\'a0\'bb, r\'e9ussir \'e0 trouver la bonne requ\'eate pour le mod\'e8le.\
+- trouver la requ\'eate pour \'e9galement afficher les POI personnalis\'e9s lors de la connexion utilisateur. Requ\'eate o\'f9 l\'92admin affiche seulement les POI de sa carte avant la connexion utilisateur. Tester une requ\'eate imbriqu\'e9e avec la variable map_id du controller add et browse qui peut \'eatre cherch\'e9e par une requ\'eate. \
+- Au final, tester avec une carte dont le donn\'e9es sont sur une table s\'e9par\'e9e si jamais requ\'eate ne fonctionne pas\
+\
+\ul A regarder  : \ulnone les requ\'eates de jointure pour pouvoir chercher des donn\'e9es dans plusieurs tables\
+\
+\ul Probl\'e8mes et limitations rencontr\'e9es lors de la V1 en natif :\
+\ulnone - impossibilit\'e9 de d\'92aller chercher l\'92id de la map pour y ajouter un POI. Le syst\'e8me de routing via un framework est bien plus avantageux dans ce cas et beaucoup plus rapide \'e0 mettre en place. \
+La mise en place en natif prendrait beaucoup plus de temps.
 \f0 \cf0 \
 }

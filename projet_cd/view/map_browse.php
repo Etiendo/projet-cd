@@ -32,11 +32,22 @@
                     <p>Nom échoppe <input type="text" name="echoppe" /></p>
                     <p>Latitude <input type="value" name="latitude"  /></p>
                     <p>Longitude <input type="value" name="longitude" /></p>
-                    <p><input type="submit" value="OK"          name="submit" /></p>
+                    <p><input type="submit" value="OK" name="submit" /></p>
                 </form>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-3">
+                <p>Nom de l'échoppe</p>
+            </div>
+              <div class="col-3">
+                <p>Latitude</p>
+            </div>
+              <div class="col-3">
+                <p>Longitude</p>
+            </div>
+          </div>
         <?php foreach ($pois as $poi) {
     ?>
           <div class="row">

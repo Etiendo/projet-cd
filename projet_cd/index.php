@@ -1,8 +1,8 @@
 <?php
 
-//controller pour la connexion utilisateur
+require 'model/map_browse_generic.php';
 
-//appel au model du login
+$poisGeneric = getPoisGeneric();
 
 require 'model/login.php';
 
@@ -28,7 +28,7 @@ if (isset($_POST['name']) && $_POST['password']) {
 
         $_SESSION['name'] = $user_data['name']; //on vérifie le champs 'name' dans la BDD
         $_SESSION['password'] = $user_data['password'];
-        $_SESSION['userid'] = $user_data['id'];
+        $_SESSION['userid'] = $user_data['user_id'];
 
         //redirection vers la page d'accueil du membre
         header('location: /Projet_CD/projet_cd/controller/map_browse.php');

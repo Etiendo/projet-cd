@@ -32,4 +32,4 @@ function addPoi($name, $lat, $lng, $map_id) {
     }
 }
 
-header('location: map_browse.php');
+// header('location: map_browse.php');

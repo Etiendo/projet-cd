@@ -15,10 +15,11 @@ function getPois()
         echo 'Connexion échouée : ' . $e->getMessage();
     }
 
-    $sql = "SELECT * FROM pois WHERE poi_id = poi_id";
+    $sql = "SELECT * FROM maps INNER JOIN pois ON pois.map_id = maps.map_id WHERE maps.user_id = 0 OR maps.user_id = ?";
+    
     $statement = $pdo->prepare($sql);
 
-    if ($statement->execute(array('poi_id'))) { // on récupère les valeurs de poi_id issues de la réquête sql que l'on va stocker dans un tableau (équivalent aussi à array('poi_id' => $_GET['poi_id']))
+    if ($statement->execute(array($_SESSION['userid']))) { // on récupère les valeurs de poi_id issues de la réquête sql que l'on va stocker dans un tableau en prennant la variable globale $_SESSION comme clé primaire afin de la lier au user_id en cours
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
