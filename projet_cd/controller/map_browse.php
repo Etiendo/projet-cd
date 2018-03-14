@@ -1,9 +1,11 @@
 <?php
 
-require '../model/page_membre.php';
+session_start();
 
-require '../model/map_browse.php';
+require 'page_membre.php';
 
-$pois = getPois();
+require '../model/map.php';
+
+$pois = Map::getPois($_SESSION['userid']);
 
 require '../view/map_browse.php';

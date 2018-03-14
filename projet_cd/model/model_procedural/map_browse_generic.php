@@ -2,7 +2,7 @@
 
 function getPoisGeneric()
 {
-    require __DIR__.'/../config.php';
+    require 'config.php';
 
     try {
         //objet PDO utilisé pour la connexion à la BDD

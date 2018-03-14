@@ -16,7 +16,7 @@ if (isset($_SESSION['name']) && isset($_SESSION['password'])) {
     echo '<br />';
 
     // On affiche un lien pour fermer notre session. Pour des raisons inconnues, le lien pointe systématiquement vers le répertoire /index/logout.php...
-    echo "<a href='../model/logout.php'>Déconnexion</a>";
+    echo "<a href='../controller/logout.php'>Déconnexion</a>";
 } else {
     echo 'Les variables ne sont pas déclarées.';
 }

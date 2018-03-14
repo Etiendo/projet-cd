@@ -1,10 +1,10 @@
 <?php
 
-require 'model/map_browse_generic.php';
+require 'model/map.php';
 
-$poisGeneric = getPoisGeneric();
+$poisGeneric = Map::getPoisGeneric();
 
-require 'model/login.php';
+require 'model/user.php';
 
 // on teste si nos variables sont définies
 
@@ -16,7 +16,7 @@ if (isset($_POST['name']) && $_POST['password']) {
 
     //on appelle la fonction checkId définie dans le model qui va vérifier les données de l'utilisateur dans la BDD. On stocke la vérification des données de l'utilisateur via la variable $user_data qui sera utilisée par la suite
 
-    $user_data = checkId($name, $pwd);
+    $user_data = User::checkId($name, $pwd);
 
     //si les données utilisateur sont différentes de null
     if ($user_data != null) {
