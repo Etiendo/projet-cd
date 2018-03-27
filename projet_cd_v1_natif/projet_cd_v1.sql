@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  lun. 19 mars 2018 à 11:00
+-- Généré le :  lun. 26 mars 2018 à 14:55
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projet_cd`
+-- Base de données :  `projet_cd_v1`
 --
 
 -- --------------------------------------------------------
@@ -75,7 +75,7 @@ CREATE TABLE `pois` (
   `lat` float NOT NULL,
   `lng` float NOT NULL,
   `content` text,
-  `picture` int(11) DEFAULT NULL,
+  `picture` text,
   `url` text,
   `map_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -85,9 +85,11 @@ CREATE TABLE `pois` (
 --
 
 INSERT INTO `pois` (`poi_id`, `name`, `lat`, `lng`, `content`, `picture`, `url`, `map_id`) VALUES
-(43, 'La Jurasserie Fine', 48.8855, 2.33576, '6 bus rue de Ravignan - 75018 - Paris', NULL, NULL, 1),
+(43, 'La Jurasserie Fine', 48.8855, 2.33576, '6 bis rue de Ravignan - 75018 - Paris', 'test', 'test', 1),
 (44, 'Chez Charlicot', 48.8615, 2.37262, '6 rue de la Folie-Méricourt - 75011 Paris', NULL, NULL, 1),
-(46, 'Chez l\'Auvergnat', 2.37175, 48.8648, '60 rue Oberkampf - 75011 Paris', NULL, NULL, NULL);
+(49, 'Laurent Dubois Bastille', 48.8548, 2.3597, NULL, NULL, NULL, 1),
+(50, 'DanaD', 48.8632, 2.33859, NULL, NULL, NULL, 1),
+(51, 'toto', 48.8516, 2.3975, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -184,7 +186,7 @@ ALTER TABLE `maps`
 -- AUTO_INCREMENT pour la table `pois`
 --
 ALTER TABLE `pois`
-  MODIFY `poi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `poi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT pour la table `templates`
 --

@@ -11,13 +11,13 @@ map.addControl(new mapboxgl.NavigationControl());
 
 var req = new XMLHttpRequest();
 
-req.open("GET", "http://localhost:8888/Projet_CD/projet_cd/controller/poi_map_generic.php", false);
+req.open("GET", "http://localhost:8888/Projet_CD/projet_cd_v1_natif/controller/poi_map_generic.php", false);
 
 req.send(null);
 
 var data = JSON.parse(req.responseText);
 
-// console.log(data);
+console.log(data);
 
 
 var geojson = {
