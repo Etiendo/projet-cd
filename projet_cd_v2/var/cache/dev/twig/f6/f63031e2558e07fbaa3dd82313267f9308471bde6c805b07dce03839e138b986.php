@@ -936,6 +936,6 @@ class __TwigTemplate_0b045ef4ebaf03acb32f0c0f17fd275678b48c53b4a564ae35f87744ab0
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/Projet_CD/projet_cd_v2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/projet-cd/projet_cd_v2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/config.html.twig");
     }
 }

@@ -145,6 +145,6 @@ class __TwigTemplate_8e38d96430b5661c6527db7ce9a17d588e66cc5cc1fd347854cd4e0541a
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url, name: 'time', status: status_color }) }}
 {% endblock %}
-", "@WebProfiler/Collector/memory.html.twig", "/Applications/MAMP/htdocs/Projet_CD/projet_cd_v2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/memory.html.twig");
+", "@WebProfiler/Collector/memory.html.twig", "/Applications/MAMP/htdocs/projet-cd/projet_cd_v2/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/memory.html.twig");
     }
 }

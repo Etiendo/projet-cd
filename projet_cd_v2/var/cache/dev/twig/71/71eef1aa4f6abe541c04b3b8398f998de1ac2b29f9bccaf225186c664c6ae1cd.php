@@ -250,6 +250,6 @@ class __TwigTemplate_1ca7613ddf1abc19fef5b614e234a58d196cc748d5962ff59bd11f8ddce
     }
 </style>
 {% endblock %}
-", "default/index.html.twig", "/Applications/MAMP/htdocs/Projet_CD/projet_cd_v2/app/Resources/views/default/index.html.twig");
+", "default/index.html.twig", "/Applications/MAMP/htdocs/projet-cd/projet_cd_v2/app/Resources/views/default/index.html.twig");
     }
 }
