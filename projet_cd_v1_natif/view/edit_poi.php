@@ -10,7 +10,7 @@
 </head>
 
 <body>
-        <!-- on récupère l'id de la page view/browse.php. ...php?id=donne un identifiant de page égal à une variable-->
+        <!-- on récupère l'id de la page view/map_browse.php. ...php?id=donne un identifiant de page égal à une variable-->
     <form action="../controller/edit_poi.php?id=<?php echo $id; ?>" method="post">
         <p>Nouveau nom <input type="text" name="poi_name" /></p>
         <p>Nouvelle latitude <input type="text" name="poi_lat" /></p>
