@@ -11,7 +11,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 var req = new XMLHttpRequest();
 
-req.open("GET", "http://localhost:8888/Projet_CD/projet_cd_v1_natif/controller/poi_map.php", false);
+req.open("GET", "http://localhost:8888/projet-cd/projet_cd_v1_natif/controller/poi_map.php", false);
 
 req.send(null);
 

@@ -14,6 +14,8 @@
     <title>Ma carte des échoppes</title>
 </head>
 
+<body>
+
 <header>
     <div id="header" class="container">
         <div id="logo">
@@ -46,7 +48,6 @@
     </div>
 </header>
 
-<body>
     <div id="banner"></div>
     <div id="page" class="container">
         <div class="mainbox">
