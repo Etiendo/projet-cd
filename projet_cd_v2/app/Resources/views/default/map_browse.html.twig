@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block body %}
 <div id="header" class="container">
         <div id="logo">
+            <a href={{ path('fos_user_security_logout') }}>Déconnexion</a></div>
             <h1><a href="#">My éshop !</a></h1>
         </div>
             
@@ -45,18 +47,15 @@
                     <h2>Ma carte perso</h2>
                     <div class="box">
                         <div id="map" class="map"></div>
-                        <span id="zoom">Trouvez votre échoppe !</span>
+                        <span id="zoom">Trouvez l'échoppe qui vous ressemble !</span>
                     </div>
                 </div>
             </div>
             <div class="col-3">
-                <h2>Ajoutez votre échoppe !</h2>
-                <form action="../controller/add_poi.php" method="post">
-                    <p>Nom échoppe <input type="text" name="echoppe" /></p>
-                    <p>Latitude <input type="value" name="latitude"  /></p>
-                    <p>Longitude <input type="value" name="longitude" /></p>
-                    <p><input type="submit" value="OK" name="submit" /></p>
-                </form>
+                <h2><a href={{ path('add_poi') }}>Ajoutez votre échoppe !<a/></h2>
+                {# {{ form_start(form, {'action': path('add_poi'), 'method': 'POST'}) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }} #}
             </div>
         </div>
 
@@ -73,17 +72,17 @@
                 <p>Longitude</p>
             </div>
           </div>
-        <?php foreach ($pois as $poi) {
-    ?>
+
+        {% for poi in pois %}
           <div class="row">
               <div class="col-3">
-                  <p><?php echo $poi['name']; ?></p>
+                  <p>{{poi.name}}</p>
               </div>
               <div class="col-3">
-                  <p><?php echo $poi['lat']; ?></p>
+                  <p>{{poi.lat}}</p>
               </div>
               <div class="col-3">
-                  <p><?php echo $poi['lng']; ?></p>
+                  <p>{{poi.lng}}</p>
               </div>
               <div class="col-2">
                 <p><a href="../controller/edit_poi.php?id=<?php echo $poi['poi_id']; ?>">Modifier</a></p>
@@ -94,8 +93,7 @@
                 </form>
               </div>
           </div>
-        <?php
-} ?>
+        {% endfor %}
     </div>
 
     <div id="carrousel" class="container">
@@ -150,3 +148,5 @@
       <a href="#" class="button">Etiam posuere</a>
     </div>
   </div>
+
+  {% endblock %}

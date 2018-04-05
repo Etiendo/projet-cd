@@ -1,7 +1,6 @@
 {
   "build/images/cheese.jpg": "/build/images/cheese.41e85a10.jpg",
-  "build/images/marqueur.jpg": "/build/images/marqueur.1267ae2a.jpg",
+  "build/images/map-marker-icon.png": "/build/images/map-marker-icon.98930f0b.png",
   "build/web.css": "/build/web.css",
-  "build/web.js": "/build/web.js",
-  "build/images/map-marker-icon.png": "/build/images/map-marker-icon.98930f0b.png"
+  "build/web.js": "/build/web.js"
 }

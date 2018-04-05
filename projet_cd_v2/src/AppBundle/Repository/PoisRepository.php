@@ -10,4 +10,16 @@ namespace AppBundle\Repository;
  */
 class PoisRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findPoisMap($user_id) {
+
+    // requête basique équivalente à findAll() : return this->queryBuilder('p')->getQuery()->getResult();
+
+    $qb = $this->createQueryBuilder('p')
+    ->innerJoin('p.map', 'm')
+    ->where('m.user = :user_id')->setParameter('user_id', $user_id);
+
+    return $qb
+    ->getQuery()
+    ->getResult();
+    }
 }

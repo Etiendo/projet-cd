@@ -72,7 +72,7 @@ class Pois
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Maps")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(name="map_id", nullable=false)
      */
     private $map;
 

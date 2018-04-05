@@ -122,6 +122,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_homepage:
 
+        // map_browse
+        if (0 === strpos($pathinfo, '/map_profile') && preg_match('#^/map_profile/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'map_browse')), array (  '_controller' => 'AppBundle\\Controller\\MapController::mapBrowseIdAction',));
+        }
+
+        // add_poi
+        if ('/add_poi' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\MapController::addPoiMapAction',  '_route' => 'add_poi',);
+        }
+
         if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {
@@ -319,6 +329,10 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_fos_user_resetting_check_email:
 
+        }
+
+        if ('/' === $pathinfo) {
+            throw new Symfony\Component\Routing\Exception\NoConfigurationException();
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
