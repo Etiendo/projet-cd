@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8" />
         <title>{% block title %}Mon échoppe préférée{% endblock %}</title>
 
@@ -17,6 +18,50 @@
 
 
     <body>
+
+        {% block navbar %}
+
+        <div id="header" class="container">
+            <div id="logo">
+                {# <h1><a href={{ path('map_browse') }}>My éshop !</a></h1> #}
+            </div>
+        </div>
+
+        {% block connexion %}{% endblock %}
+                
+            <div id="menu">
+                <ul>
+                    <li class="active">
+                        <a href="#" acceskey="1">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#" acceskey="2">Les échoppes</a>
+                    </li>
+                    <li>
+                        <a href="#" acceskey="3">Articles</a>
+                    </li>
+                    <li>
+                        <a href="#" acceskey="4">A propos</a>
+                    </li>
+                    <li>
+                        <a href="#" acceskey="5">Nous contacter</a>
+                    </li>
+                </ul>
+                <div class="raw">
+                    <div class="col-6"></div>
+                    <form action="" class="form-inline my-2 my-lg-0" accesskey="6">
+                    <div class="col-2">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Mon échoppe" aria-label="Search">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher mon échoppe</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        {% endblock %}
+
 
         {% block body %}{% endblock %}
 

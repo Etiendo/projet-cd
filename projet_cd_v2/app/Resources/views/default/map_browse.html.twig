@@ -1,43 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div id="header" class="container">
-        <div id="logo">
-            <a href={{ path('fos_user_security_logout') }}>Déconnexion</a></div>
-            <h1><a href="#">My éshop !</a></h1>
-        </div>
-            
-        <div id="menu">
-            <ul>
-                <li class="active">
-                    <a href="#" acceskey="1">Accueil</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="2">Les échoppes</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="3">Articles</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="4">A propos</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="5">Nous contacter</a>
-                </li>
-            </ul>
-            <div class="raw">
-                <div class="col-6"></div>
-                <form action="" class="form-inline my-2 my-lg-0" accesskey="6">
-                <div class="col-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Mon échoppe" aria-label="Search">
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher mon échoppe</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
+    <a href={{ path('fos_user_security_logout') }}>Déconnexion</a>
 
     <div id="banner"></div>
     <div id="page" class="container">
@@ -53,9 +18,6 @@
             </div>
             <div class="col-3">
                 <h2><a href={{ path('add_poi') }}>Ajoutez votre échoppe !<a/></h2>
-                {# {{ form_start(form, {'action': path('add_poi'), 'method': 'POST'}) }}
-                {{ form_widget(form) }}
-                {{ form_end(form) }} #}
             </div>
         </div>
 

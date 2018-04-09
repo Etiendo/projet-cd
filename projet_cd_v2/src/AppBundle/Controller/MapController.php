@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -31,11 +32,11 @@ class MapController extends Controller
     } 
 
     /**
-     * @Route("/map_profile/{id}", name="map_browse")
+     * @Route("/map_profile", name="map_browse")
      */
-    public function mapBrowseIdAction($id, Request $request)
+    public function mapBrowseIdAction(Request $request)
     {
-        $id = $this->getUser()->getId();
+        $id = $this->getUser()->getId(); // pois ne se chargent pas avec l'id dans URL
         $pois = $this->getDoctrine()
         ->getRepository('AppBundle:Pois')
         ->findPoisMap($id);
@@ -45,10 +46,17 @@ class MapController extends Controller
     }
 
     /**
-     * @Route("/add_poi", name="add_poi")
+     * @Route("/add_poi_map", name="add_poi")
      */
     public function addPoiMapAction(Request $request)
     {
+        // récupère l'id de l'utilisateur connecté
+        $user_id = $this->getUser()->getId();
+
+        // récupère la map
+        $map = $this->getDoctrine()
+        ->getRepository('AppBundle:Maps')->find($user_id);
+
         $poi =  new Pois;
 
         $form = $this->createFormBuilder($poi)
@@ -58,27 +66,26 @@ class MapController extends Controller
         ->add('ajouter_poi', SubmitType::class)
         ->getForm();
 
-        $form = handleRequest($request);
-        if ($form -> isSubmitted() && $form->isValid()) {
+        $form -> handleRequest($request);
+        if ($form -> isSubmitted() && $form -> isValid()) {
 
-            $name = $form['nom_echoppe']->getData();
-            $lat = $form['latitude']->getData();
-            $lng = $form['longitude']->getData();
+            $name = $form['name']->getData();
+            $lat = $form['lat']->getData();
+            $lng = $form['lng']->getData();
 
-            $poi -> setName($name);
-            $poi -> setLat($lat);
-            $poi -> setLng($lng);
+            $poi->setName($name);
+            $poi->setLat($lat);
+            $poi->setLng($lng);
+            $poi->setMap($map);
 
-            $em = $this -> getDoctrine() -> getManager();
-            $em -> persit($poi);
-            $em -> flush();
+            $em = $this -> getDoctrine()->getManager();
+            $em->persist($poi);
+            $em->flush();
 
             $this -> addFlash('notice', 'Poi ajouté !');
 
-            return $this -> render('default/map_browse.html.twig', array('form' => $form -> createView()));
-
-            // return $this -> redirectToRoute('map_browse');
+            return $this -> redirectToRoute('map_browse');
         }
-
+        return $this -> render('default/add_poi.html.twig', array('form' => $form -> createView()));
     }
 }

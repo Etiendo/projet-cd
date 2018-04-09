@@ -123,12 +123,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         not_homepage:
 
         // map_browse
-        if (0 === strpos($pathinfo, '/map_profile') && preg_match('#^/map_profile/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'map_browse')), array (  '_controller' => 'AppBundle\\Controller\\MapController::mapBrowseIdAction',));
+        if ('/map_profile' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\MapController::mapBrowseIdAction',  '_route' => 'map_browse',);
         }
 
         // add_poi
-        if ('/add_poi' === $pathinfo) {
+        if ('/add_poi_map' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\MapController::addPoiMapAction',  '_route' => 'add_poi',);
         }
 
