@@ -88,4 +88,20 @@ class MapController extends Controller
         }
         return $this -> render('default/add_poi.html.twig', array('form' => $form -> createView()));
     }
+
+    /**
+     * @Route("edit_poi_map", name="edit_poi")
+     */
+    public function editPoiAction()
+    {
+
+    }
+
+    /**
+     * @Route("delete_poi_map", name="delete_poi")
+     */
+    public function deletePoiAction()
+    {
+
+    }
 }

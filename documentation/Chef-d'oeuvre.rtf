@@ -9,8 +9,9 @@
 
 \f0\fs24 \cf0 \ul \ulc0 Comp\'e9tences attendues pour titre pro :\ulnone \
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\b 1.Maquetter une application\
+\b \cf0 1.Maquetter une application\
 2. Conception d\'92une BDD (diagramme des classes)\
 3. Mettre en place une BDD (requ\'eate SQL)\
 4. D\'e9velopper une interface utilisateur (formulaire fonctionnel)\
@@ -19,8 +20,9 @@
 7. Mettre en place une solution de gestion de contenu ou e-commerce (mettre en place th\'e8me enfant)\
 8. D\'e9velopper une application simple de mobilit\'e9 num\'e9rique\
 9. Utiliser l\'92anglais dans son activit\'e9  professionnel en informatique\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\b0 \
+\b0 \cf0 \
 \
 Compte utilisateur : \
 - faire liste de ses \'e9choppes pr\'e9f\'e9r\'e9es,\
@@ -39,31 +41,38 @@ Le but est de pouvoir int\'e9grer ensuite cette application au syst\'e8me exista
 \
 Vizity et l\'92application chef-d\'92oeuvre se d\'e9marquent donc des autres prestataires selon le mod\'e8le suivant : un client am\'e8ne une base de donn\'e9es brutes avec un cahier des charges pr\'e9cis d\'92une carte personnalis\'e9e \'e0 r\'e9aliser et cibl\'e9e sur un besoin sp\'e9cifique.\
 \
-\ul Etapes :\
-\ulnone Diagramme des classes : quels objets/classes vont traiter les fonctionnalit\'e9s pr\'e9sentes dans mon application \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Etapes :\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone Diagramme des classes : quels objets/classes vont traiter les fonctionnalit\'e9s pr\'e9sentes dans mon application \ul \
 \ulnone 1. int\'e9grer la fiche lieu dans la carte (et donc le rendu est g\'e9r\'e9 par Vizity)\
 2. concernant le carousel, au clic sur une \'e9chope, recharger la page en appelant une carte avec un param\'e8tre d\'92url qui ira zoomer sur le bon lieu\
 \
 Quelle est la diff\'e9rence entre iframe et une API ? L\'92iframe permet d\'92int\'e9grer une carte que l\'92on a param\'e9tr\'e9e au pr\'e9alable avec seulement une balise <iframe> qui va aller r\'e9cup\'e9rer le code html de la carte et l\'92int\'e9grer au site. Une API permettra de d\'e9velopper beaucoup plus pr\'e9cis\'e9ment la carte que l\'92on souhaite.\
 \
 \
-\ul Id\'e9es en vrac :\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Id\'e9es en vrac :\
 \
-\ulnone Les donn\'e9es renvoy\'e9es au format JSON par l\'92API de Vizity pourront \'eatre r\'e9cup\'e9r\'e9es et stock\'e9es dans des variables utilis\'e9es par la suite pour l\'92affichage d\'92informations (revoir ce qui a \'e9t\'e9 fait en stage \'e0 ce niveau, par exemple coordonn\'e9es des POI,\'85).\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone Les donn\'e9es renvoy\'e9es au format JSON par l\'92API de Vizity pourront \'eatre r\'e9cup\'e9r\'e9es et stock\'e9es dans des variables utilis\'e9es par la suite pour l\'92affichage d\'92informations (revoir ce qui a \'e9t\'e9 fait en stage \'e0 ce niveau, par exemple coordonn\'e9es des POI,\'85).\
 \
 On stocke les donn\'e9es des \'e9choppes (coordonn\'e9es, nom,\'85) dans notre propre BDD. Ces donn\'e9es seront ensuite envoy\'e9es \'e0 l\'92API de Vizity via une requ\'eate POST et le jeu de donn\'e9es r\'e9cup\'e9r\'e9 sera int\'e9gr\'e9 dans une iframe.\
 \
 Table de donn\'e9es POI dans notre BDD ou dans celle de Vizity pour utilisation de l\'92API ?\
 \
-\ul Axes d\'92am\'e9lioration apr\'e8s la 1\'e8re review :\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Axes d\'92am\'e9lioration apr\'e8s la 1\'e8re review :\
 \
-\ulnone - Ajouter une relation many-to-many \'e0 la BDD (cr\'e9er une table template avec plusieurs templates par carte et plusieurs cartes pour un template)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone - Ajouter une relation many-to-many \'e0 la BDD (cr\'e9er une table template avec plusieurs templates par carte et plusieurs cartes pour un template)\
 - Fusionner la pr\'e9sentation de l\'92appli avec les lots fonctionnels\
 - Rendre les use case diagram plus lisibles\
 - Penser une maquette mobile (m\'eame si ce n\'92est pas l\'92usage \'e0 la base)\
 - Int\'e9grer un champs user_role pour aller chercher les POI de base li\'e9s \'e0 un user_admin. Ceci permettra d\'92afficher les POI de base en mode visiteur\
 \
-\ul Point Tanguy :\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul Point Tanguy :\
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -125,4 +134,6 @@ Liens des vid\'e9os :\
 
 \b \cf0 iframe Vizity : 
 \b0 <iframe src=\'93https://vizity.io/map/666?embedded\'94 width=\'93820" height=\'93480\'94></iframe>\
-Remplacer le 666 par le num de carte visible dans l\'92url}
+Remplacer le 666 par le num de carte visible dans l\'92url\
+\
+Penser \'e0 int\'e9grer la gestion des formulaires avec du Javascript, par exemple pour v\'e9rifier les informations, animer les cases lors de la saisie, etc,\'85}

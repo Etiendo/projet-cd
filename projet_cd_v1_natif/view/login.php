@@ -11,7 +11,7 @@
     <link href="assets/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Ma carte des échoppes</title>
+    <title>Mon échoppe.io</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div id="header" class="container">
         <div id="logo">
             <h1>
-                <a href="#">Ma fromagerie préférée</a>
+                <a href="#">Mon échoppe.io</a>
             </h1>
         </div>
         <div id="menu">
@@ -30,14 +30,14 @@
                 </li>
                 <li>
                     <form action="index.php" method="post" acceskey="3">
-                        <div class="form-group row">
-                            <div class="col-4">
-                                <label accesskey="3">Identifiant    <input type="text" id="utilisateur" name="name"></label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label accesskey="3">Identifiant<input type="text" id="utilisateur" name="name"></label>
                             </div>
-                            <div class="col-4">
-                            <label acceskey="4">Mot de passe     <input type="password" id="motdepasse" name="password"></label>
+                            <div class="col-md-4">
+                            <label acceskey="4">Mot de passe<input type="password" id="motdepasse" name="password"></label>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4">
                             <input type="submit" value="Connexion" name="submit">
                             </div>
                         </div>  

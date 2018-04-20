@@ -17,7 +17,7 @@
 
     <div id="header" class="container">
         <div id="logo">
-            <h1><a href="#">My éshop !</a></h1>
+            <h1><a href="#">Mon échoppe.io !</a></h1>
         </div>
             
         <div id="menu">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <br><br><br>
+        <br><br><br><br><br><br><br><br><br>
 
         <div class="row">
             <div class="col-3">

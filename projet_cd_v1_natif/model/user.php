@@ -25,6 +25,9 @@ Class User {
 
         $statement = self::createStatement($sql);
 
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':password', $pwd);
+
         if ($statement->execute()) {
           echo "Inscription effectuée !";
       } else {

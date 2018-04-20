@@ -132,6 +132,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\MapController::addPoiMapAction',  '_route' => 'add_poi',);
         }
 
+        // edit_poi
+        if ('/edit_poi_map' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\MapController::editPoiAction',  '_route' => 'edit_poi',);
+        }
+
+        // delete_poi
+        if ('/delete_poi_map' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\MapController::deletePoiAction',  '_route' => 'delete_poi',);
+        }
+
         if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {

@@ -17,8 +17,6 @@ req.send(null);
 
 var data = JSON.parse(req.responseText);
 
-console.log(data);
-
 
 var geojson = {
     type: 'FeatureCollection',
