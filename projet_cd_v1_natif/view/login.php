@@ -17,36 +17,43 @@
 <body>
 
 <header>
-    <div id="header" class="container">
-        <div id="logo">
-            <h1>
-                <a href="#">Mon échoppe.io</a>
-            </h1>
-        </div>
-        <div id="menu">
-            <ul>
-                <li class="active">
-                    <a href="controller/inscription.php" accesskey="1">Inscription</a>
-                </li>
-                <li>
-                    <form action="index.php" method="post" acceskey="3">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label accesskey="3">Identifiant<input type="text" id="utilisateur" name="name"></label>
-                            </div>
-                            <div class="col-md-4">
-                            <label acceskey="4">Mot de passe<input type="password" id="motdepasse" name="password"></label>
-                            </div>
-                            <div class="col-md-4">
-                            <input type="submit" value="Connexion" name="submit">
-                            </div>
-                        </div>  
-                    </form>
-                </li>
-            </ul>
+    <div id="header" class="navigation">
+        <div class="container">
+            <div class="row">
+                <div id="logo">
+                    <h1><a href="#">Mon échoppe.io !</a></h1>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-5">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <form action="index.php" method="post">
+                                <div class="navbar-nav">
+                                    <a class="nav-item nav-link" href="controller/inscription.php">Inscription</a>
+                                    <a class="nav-item nav-link">
+                                        <label>Identifiant<input type="text" id="utilisateur" name="name"></label>
+                                    </a>
+                                    <a class="nav-item nav-link">
+                                        <label>Mot de passe<input type="password" id="motdepasse" name="password"></label>
+                                    </a>
+                                    <a class="nav-item nav-link">
+                                        <input type="submit" value="Connexion" name="submit">
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
 </header>
+
 
     <div id="banner"></div>
     <div id="page" class="container">

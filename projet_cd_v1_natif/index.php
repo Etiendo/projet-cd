@@ -33,7 +33,7 @@ if (isset($_POST['name']) && $_POST['password']) {
         //redirection vers la page d'accueil du membre
         header('location: /projet-cd/projet_cd_v1_natif/controller/map_browse.php');
     } else {
-        echo 'Ça marche pô';
+        echo 'Identifiants incorrects';
     }
 }
 

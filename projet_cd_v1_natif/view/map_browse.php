@@ -15,7 +15,7 @@
 
 <body>
 
-    <div id="header" class="container">
+    <!-- <div id="header" class="container">
         <div id="logo">
             <h1><a href="#">Mon échoppe.io !</a></h1>
         </div>
@@ -50,7 +50,45 @@
                 </form>
             </div>
         </div>
+    </div> -->
+
+<div id="header" class="container">
+    <div class="navigation">
+        <div class="container">
+            <div class="row">
+                <div id="logo">
+                    <h1><a href="#">Mon échoppe.io !</a></h1>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-4">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="#">Accueil</a>
+                                <a class="nav-item nav-link" href="#">Articles</a>
+                            <a class="nav-item nav-link" href="#">A propos</a>
+                                <a class="nav-item nav-link" href="#">Nous contacter</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-4">
+                    <form action="" class="form-inline my-2 my-lg-0" accesskey="6">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Mon échoppe" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher mon échoppe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
 
     <div id="banner"></div>
     <div id="page" class="container">
