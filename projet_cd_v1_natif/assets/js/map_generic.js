@@ -17,7 +17,6 @@ req.send(null);
 
 var data = JSON.parse(req.responseText);
 
-
 var geojson = {
     type: 'FeatureCollection',
     features: data // données récupérées de la BDD via la requête http

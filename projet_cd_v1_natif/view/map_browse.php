@@ -15,49 +15,12 @@
 
 <body>
 
-    <!-- <div id="header" class="container">
-        <div id="logo">
-            <h1><a href="#">Mon échoppe.io !</a></h1>
-        </div>
-            
-        <div id="menu">
-            <ul>
-                <li class="active">
-                    <a href="#" acceskey="1">Accueil</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="2">Les échoppes</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="3">Articles</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="4">A propos</a>
-                </li>
-                <li>
-                    <a href="#" acceskey="5">Nous contacter</a>
-                </li>
-            </ul>
-            <div class="raw">
-                <div class="col-6"></div>
-                <form action="" class="form-inline my-2 my-lg-0" accesskey="6">
-                <div class="col-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Mon échoppe" aria-label="Search">
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher mon échoppe</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
-
 <div id="header" class="container">
     <div class="navigation">
         <div class="container">
             <div class="row">
                 <div id="logo">
-                    <h1><a href="#">Mon échoppe.io !</a></h1>
+                    <h1><a href="/projet-cd/projet_cd_v1_natif/">Mon échoppe.io !</a></h1>
                 </div>
                 <div class="col-6">
                 </div>
@@ -105,43 +68,43 @@
             <div class="col-3">
                 <h2>Ajoutez votre échoppe !</h2>
                 <form action="../controller/add_poi.php" method="post">
-                    <p>Nom échoppe <input type="text" name="echoppe" /></p>
-                    <p>Latitude <input type="value" name="latitude"  /></p>
-                    <p>Longitude <input type="value" name="longitude" /></p>
-                    <p><input type="submit" value="OK" name="submit" /></p>
+                    <label>Nom échoppe <input type="text" name="echoppe" required /></label>
+                    <label>Latitude <input type="value" name="latitude"  required/></label>
+                    <label>Longitude <input type="value" name="longitude" required/></label>
+                    <label><input type="submit" value="OK" name="submit" /></label>
                 </form>
             </div>
         </div>
 
-        <br><br><br><br><br><br><br><br><br>
-
+        <div id="page" class="container">
+        <div class="mainbox">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 col-sm">
                 <p>Nom de l'échoppe</p>
             </div>
-              <div class="col-3">
+              <div class="col-md-2 col-sm">
                 <p>Latitude</p>
             </div>
-              <div class="col-3">
+              <div class="col-md-3 col-sm">
                 <p>Longitude</p>
             </div>
           </div>
         <?php foreach ($pois as $poi) {
     ?>
           <div class="row">
-              <div class="col-3">
+              <div class="col-md-3 col-sm">
                   <p><?php echo $poi['name']; ?></p>
               </div>
-              <div class="col-3">
+              <div class="col-md-2 col-sm">
                   <p><?php echo $poi['lat']; ?></p>
               </div>
-              <div class="col-3">
+              <div class="col-md-2 col-sm">
                   <p><?php echo $poi['lng']; ?></p>
               </div>
-              <div class="col-2">
+              <div class="col-md-2 col-sm">
                 <p><a href="../controller/edit_poi.php?id=<?php echo $poi['poi_id']; ?>">Modifier</a></p>
               </div>
-              <div class="col-1">
+              <div class="col-md-2 col-sm">
                 <form action="../controller/delete_poi.php?id=<?php echo $poi['poi_id']; ?>" method="post">
                   <p><input type="submit" value="Supprimer POI" name="submit" /></p>
                 </form>
@@ -149,6 +112,7 @@
           </div>
         <?php
 } ?>
+    </div>
     </div>
 
     <div id="carrousel" class="container">
